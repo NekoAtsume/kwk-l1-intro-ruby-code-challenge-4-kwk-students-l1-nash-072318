@@ -1,7 +1,24 @@
 #write out your code here
 
 def least_coins(cents)
-
-#Code your answer here!
-
+  solution = {}
+  
+  num_quarters = cents / 25
+  solution[:quarters] =num_quarters
+  cents = cents - 25*num_quarters
+  
+  num_dimes = cents/ 10 
+  solution[:dimes] =num_dimes 
+  cents = cents - 10*num_dimes
+  
+  num_nickel = cents/ 5 
+  solution[:nickels] =num_nickel
+  cents = cents - 5*num_nickel
+  
+  num_pennies = cents/ 1
+ solution[:pennies] =num_pennies
+ cents = cents - 1*num_pennies
+ 
+  puts solution
 end
+least_coins(67)
